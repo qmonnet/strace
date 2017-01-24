@@ -483,6 +483,9 @@ the default error code returned by the kernel, which is traditionally
 .B ENOSYS
 for invalid syscall numbers on most architectures.
 
+If :\fBretval\fR=\,\fInumber\/\fR option is specified,
+success injection is performed.
+
 If a signal is specified using either a symbolic value like
 .B SIGSEGV
 or a numeric value within 1..\fBSIGRTMAX\fR range,

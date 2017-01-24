@@ -11,3 +11,13 @@ arch_set_error(struct tcb *tcp)
 	aarch64_regs.regs[0] = -tcp->u_error;
 	return set_regs(tcp->pid);
 }
+
+static int
+arch_set_success(struct tcb *tcp)
+{
+	if (aarch64_io.iov_len == sizeof(arm_regs))
+		return arm_set_success(tcp);
+
+	aarch64_regs.regs[0] = tcp->u_rval;
+	return set_regs(tcp->pid);
+}
