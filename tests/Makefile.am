@@ -117,6 +117,7 @@ check_PROGRAMS = \
 	fanotify_init \
 	fanotify_mark \
 	fault_injection \
+	fault_injection-success \
 	fchdir \
 	fchmod \
 	fchmodat \
@@ -836,6 +837,7 @@ MISC_TESTS = \
 	detach-running.test \
 	detach-sleeping.test \
 	detach-stopped.test \
+	fault_injection-success.test \
 	fault_injection.test \
 	fault_syntax.test \
 	filter-unavailable.test \
